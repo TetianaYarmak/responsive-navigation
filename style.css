@@ -1,0 +1,103 @@
+:root {
+  --text-purple-dark: #392c72;
+  --text-gray-dark: #4f4f4f;
+  --text-gray-middle: #828282;
+  --text-gray-light: #bdbdbd;
+  --colors-purple-light: #9e8cfc;
+  --colors-white: #fff;
+  --colors-blue-dark: #283046;
+  --colors-blue-darken: #161d31;
+  --colors-yellow: #f2c94c;
+  --colors-green-light: #6fcf97;
+  --colors-red: #ea5455;
+}
+
+:root {
+  --font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  font-family: var(--font-family);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--text-purple-dark);
+}
+
+aside {
+  width: 220px;
+
+  &:has(:checked) {
+    width: 86px;
+
+    .arrow {
+      rotate: 180deg;
+    }
+
+    h1,
+    span {
+      display: none;
+    }
+  }
+
+  .logo {
+    display: flex;
+  }
+
+  .logo-text {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--text-purple-dark);
+  }
+
+  a {
+    display: flex;
+  }
+
+  .icon {
+    position: relative;
+  }
+
+  .icon[data-count]::after {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    content: attr(data-count);
+    display: block;
+    border-radius: 50%;
+    background-color: #f2c94c;
+    width: 20px;
+    height: 20px;
+    align-content: center;
+    text-align: center;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--text-gray-middle);
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-gray-dark);
+  }
+}
