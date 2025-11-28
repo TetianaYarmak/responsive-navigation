@@ -50,14 +50,53 @@ aside {
       rotate: 180deg;
     }
 
+    .dashboard,
+    a {
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo {
+      padding-left: 25px;
+    }
+
+    label {
+      padding-left: 17px !important;
+    }
+
+    .dashboard,
+    .icon {
+      padding-left: 0;
+    }
+
     h1,
+    text,
     span {
       display: none;
     }
+
+    h2::after {
+      display: block;
+      bottom: 15px;
+    }
+
+    .dashboard,
+    .menu-group {
+      margin-bottom: 30px;
+    }
+
+
   }
 
   .logo {
     display: flex;
+    gap: 5px;
+    align-items: center;
+    padding-block: 30px 40px;
+
+    label {
+      padding-left: 30px;
+    }
   }
 
   .logo-text {
@@ -66,12 +105,20 @@ aside {
     color: var(--text-purple-dark);
   }
 
+  .dashboard {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-left: 15px;
+  }
+
   a {
     display: flex;
   }
 
   .icon {
     position: relative;
+    padding-left: 15px;
   }
 
   .icon[data-count]::after {
@@ -89,15 +136,35 @@ aside {
   }
 
   h2 {
+    display: block;
+    padding-block: 30px 10px;
+    padding-left: 15px;
+    margin: 0;
     font-weight: 400;
     font-size: 16px;
     text-transform: uppercase;
     color: var(--text-gray-middle);
+    position: relative;
+  }
+
+  h2::after {
+    position: absolute;
+    content: url(images/line.svg);
+    display: none;
   }
 
   span {
+    display: block;
+    padding-left: 20px;
     font-weight: 400;
     font-size: 16px;
     color: var(--text-gray-dark);
   }
+
+  li {
+    height: 46px;
+    display: block;
+    align-content: center;
+  }
+
 }
